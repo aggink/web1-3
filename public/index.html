@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Личная карточка</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <div class="myCard">
+        <div class="left">
+            <!--Слайдер-->
+            <div class="Slider table">
+                <div class="table-row">
+                    <!--Кнопка назад-->
+                    <div class="Slider-col">
+                        <a class="back" onclick="go(-1)">&#10094;</a>
+                    </div>
+                    <!--Слайдер-->
+                    <div class="Slides Slider-col">
+                        <img src="image/Golden_Kamuy.jpg">
+                    </div>
+                    <div class="Slides Slider-col">
+                        <img src="image/Dororo.jpg">
+                    </div>
+                    <div class="Slides Slider-col">
+                        <img src="image/BlackClover.jpg">
+                    </div>
+                    <div class="Slides Slider-col">
+                        <img src="image/Fire_Force.jpg">
+                    </div>
+                    <!--Кнопки вперед-->
+                    <div class="Slider-col">
+                        <a class="next" onclick="go(1)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+            <!--Переключения между слайдами-->
+            <div class="button">
+                <span class="buttons" onclick="show(1)"></span>
+                <span class="buttons" onclick="show(2)"></span>
+                <span class="buttons" onclick="show(3)"></span>
+                <span class="buttons" onclick="show(4)"></span>
+            </div>
+        </div>
+        <div class="right">
+            <table>
+                <tr>
+                    <td colspan="2" class="info">Личная информация</td>
+                </tr>
+                <tr>
+                    <td class="about">Имя</td>
+                    <td class="about-otvet person">Хяккимару</td>
+                </tr>
+                <tr>
+                    <td class="about">Прозвища</td>
+                    <td class="about-otvet person">Братец, Демон</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="info">Характеристика</td>
+                </tr>
+                <tr>
+                    <td class="about">Вид</td>
+                    <td class="about-otvet person">Человек</td>
+                </tr>
+                <tr>
+                    <td class="about">Пол</td>
+                    <td class="about-otvet person">Муржской</td>
+                </tr>
+                <tr>
+                    <td class="about">Возраст</td>
+                    <td class="about-otvet person">14 лет</td>
+                </tr>
+                <tr>
+                    <td class="about">Рост</td>
+                    <td class="about-otvet person">163 см</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="info">Описание</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text person">Хяккимару – худой подросток среднего роста. Имеет длинные, теплого оттенка черные волосы, собранные в высокий конский хвост. У юноши достаточно бледная, с бескровным, неярким цветом, кожа. Глаза подростка, имеющие ясный, приближенный к яркому каштановому оттенку цвет, продолжительное время заменены глазными протезами с карей радужкой.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="decision">
+        <p class="text-dec">Лабораторная работа 2</p>
+        <p class="text-task">Задание 1.1</p>
+        <ul>
+            <li>Добавьте к функции параметр с любым именем;</li>
+            <li>Функция должна возвращать аргумент, переданный ей в качестве параметра.</li>
+        </ul>
+        <div class="form">
+            <p>Нажми на кнопку!</p>
+            <input class="sumbit" type="submit" value="Отправить" onclick="copy(1)">
+            <input class="sumbit" type="submit" value="Сбросить" onclick="copy(0)">
+        </div>
+        <div class="result">
+            <p id="otvet"></p>
+        </div>
+        <p class="text-task">Задание 1.2</p>
+        <ul>
+            <li>Функция должна возвращать сумму переданных аргументов.</li>
+        </ul>
+        <div class="form">
+            <p>Введите два числа:</p>
+            <input class="input-text number" type="text">
+            <input class="input-text number" type="text">
+            <input class="sumbit" type="submit" value="Сумма" onclick="sum()">
+            <input class="sumbit" type="submit" value="Сбросить" onclick="sum_no()">
+        </div>
+        <div class="result2">
+            <p id="otvet2"></p>
+        </div>
+        <p class="text-task">Задание 1.3</p>
+        <ul>
+            <li>Пройтись по массиву и каждый его элемент возвести в квадрат, если элемент в массиве не число, то превратить его в 0. </li>
+        </ul>
+        <div class="form">
+            <input class="input-text massive" type="text">
+            <input class="input-text massive" type="text">
+            <input class="input-text massive" type="text">
+            <input class="input-text massive" type="text">
+            <input class="input-text massive" type="text">
+            <input class="input-text massive" type="text">
+            <input class="sumbit" type="submit" value="Возвести в крвадрат" onclick="square()">
+            <input class="sumbit" type="submit" value="Сбросить" onclick="square_no()">
+        </div>
+        <div class="result3">
+            <p id="otvet3"></p>
+        </div>
+        <p class="text-task">Задание 2</p>
+        <ul>
+            <li>Реализован слайдер, а также при изменении изображения меняется и личная информация о персонаже.</li>
+        </ul>
+    </div> 
+    <div class="decision">
+        <p class="text-dec">Лабораторная работа 3</p>
+        <p class="text-task">Задание</p>
+        <ul>
+            <li>Развернуть сервер на локале и отобразить на нем свою личную карточку.</li>
+        </ul>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
