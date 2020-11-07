@@ -124,6 +124,7 @@ function copy(num){
     
     if(num == 0){
         result[0].style.display = "none";
+        number = 0;
     }
     
     if(num != 0){
@@ -158,6 +159,11 @@ function sum2(num1, num2){
 function sum_no(){
     var result = document.getElementsByClassName("result2");
     var otvet = document.getElementById('otvet2');
+    var num = document.getElementsByClassName("number");
+    
+    for(var i = 0; i < num.length; i++){
+        num[i].value = "";
+    }
     
     otvet.innerHTML = "";
     result.style.display = "none";
@@ -191,6 +197,11 @@ function square(){
 function square_no(){
     var result = document.getElementsByClassName("result3");
     var otvet = document.getElementById('otvet3');
+    var num = document.getElementsByClassName("massive");
+    
+    for(var i = 0; i < num.length; i++){
+        num[i].value = "";
+    }
     
     otvet.innerHTML = "";
     result.style.display = "none";
